@@ -2,25 +2,30 @@
   "name": "wordpress-plugin-sandbox",
   "version": "1.0.0",
   "description": "A sandbox for developing WordPress plugins",
+  "keywords": [],
+  "license": "UNLICENSED",
+  "author": {
+    "name": "Brandon Tom",
+    "email": "magicink@gmail.com"
+  },
   "main": "index.js",
   "scripts": {
     "format": "prettier --write \"./**/*.{js,md,php}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": {
-    "name": "Brandon Tom",
-    "email": "magicink@gmail.com"
-  },
-  "license": "UNLICENSED",
-  "devDependencies": {
-    "@prettier/plugin-php": "^0.16.1",
-    "husky": "^5.0.9",
-    "prettier": "^2.2.1"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "npm run format"
     }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.16",
+    "@babel/core": "^7.12.16",
+    "@babel/plugin-transform-arrow-functions": "^7.12.13",
+    "@babel/plugin-transform-template-literals": "^7.12.13",
+    "@babel/preset-react": "^7.12.13",
+    "@prettier/plugin-php": "^0.16.1",
+    "husky": "^5.0.9",
+    "prettier": "^2.2.1"
   }
 }
