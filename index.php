@@ -5,12 +5,12 @@
 require_once 'Modules/Site.php';
 
 if (!class_exists(PluginSandbox::class)) {
-    class PluginSandbox
+  class PluginSandbox
+  {
+    public function __construct()
     {
-      public function __construct()
-      {
-        new Modules\Site();
-      }
+      new Modules\Site();
     }
-    new PluginSandbox();
+  }
+  new PluginSandbox();
 }

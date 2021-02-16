@@ -10,7 +10,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "format": "prettier --write \"./**/*.{js,md,php}\"",
+    "format": "prettier --write \"./**/*.{js,json,md,php}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "husky": {
