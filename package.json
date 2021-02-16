@@ -1,0 +1,26 @@
+{
+  "name": "wordpress-plugin-sandbox",
+  "version": "1.0.0",
+  "description": "A sandbox for developing WordPress plugins",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"./**/*.{js,md,php}\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Brandon Tom",
+    "email": "magicink@gmail.com"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.16.1",
+    "husky": "^5.0.9",
+    "prettier": "^2.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format"
+    }
+  }
+}

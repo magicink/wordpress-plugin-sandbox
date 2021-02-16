@@ -1,0 +1,14 @@
+{
+  "name": "brandontom.com/plugin-lab",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "magic",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+  }
+}
