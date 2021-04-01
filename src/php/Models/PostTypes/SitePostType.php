@@ -2,8 +2,8 @@
 
 require 'PostType.php';
 
-if (!class_exists(Site::class)) {
-  class Site extends PostType
+if (!class_exists(SitePostType::class)) {
+  class SitePostType extends PostType
   {
     function register()
     {
