@@ -3,12 +3,11 @@
 require 'Block.php';
 
 if (!class_exists(OtherBlock::class)) {
-    class OtherBlock extends Block
+  class OtherBlock extends Block
+  {
+    public function register()
     {
-        public function register()
-        {
-            // TODO: Implement register() method.
-        }
+      // TODO: Implement register() method.
     }
+  }
 }
-

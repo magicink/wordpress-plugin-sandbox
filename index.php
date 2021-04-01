@@ -7,14 +7,14 @@ require_once 'src/php/Models/Blocks/SampleBlock.php';
 require_once 'src/php/Models/Blocks/OtherBlock.php';
 
 if (!class_exists(PluginSandbox::class)) {
-    class PluginSandbox
+  class PluginSandbox
+  {
+    /** @noinspection PhpExpressionResultUnusedInspection */
+    public function __construct()
     {
-        /** @noinspection PhpExpressionResultUnusedInspection */
-        public function __construct()
-        {
-            new Modules\PostTypes\Site();
-        }
+      new Modules\PostTypes\Site();
     }
+  }
 
-    new PluginSandbox();
+  new PluginSandbox();
 }
