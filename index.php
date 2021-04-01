@@ -2,15 +2,19 @@
 /**
  * Plugin Name: WordPress Plugin Sandbox
  */
-require_once 'Modules/Site.php';
+require_once 'src/php/Models/PostTypes/Site.php';
+require_once 'src/php/Models/Blocks/SampleBlock.php';
+require_once 'src/php/Models/Blocks/OtherBlock.php';
 
 if (!class_exists(PluginSandbox::class)) {
-  class PluginSandbox
-  {
-    public function __construct()
+    class PluginSandbox
     {
-      new Modules\Site();
+        /** @noinspection PhpExpressionResultUnusedInspection */
+        public function __construct()
+        {
+            new Modules\PostTypes\Site();
+        }
     }
-  }
-  new PluginSandbox();
+
+    new PluginSandbox();
 }
