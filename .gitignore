@@ -3,3 +3,9 @@
 
 # Dependencies
 node_modules/
+
+# Git Hooks
+.husky/
+
+# Artifacts
+build/
