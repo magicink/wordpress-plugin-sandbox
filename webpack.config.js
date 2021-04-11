@@ -19,6 +19,10 @@ module.exports = () => {
       ],
       main: [`${path.resolve(__dirname)}/src/js/index.js`]
     },
+    externals: {
+      react: 'React',
+      'react-dom': 'ReactDOM'
+    },
     module: {
       rules: [
         {

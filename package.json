@@ -10,17 +10,19 @@
   },
   "main": "index.php",
   "scripts": {
-    "build": "npx rimraf build/ && webpack serve --config ./webpack.config.js --mode development",
     "format": "prettier --write \"./**/*.{js,json,md,php}\"",
     "hook:precommit": "npm run format && git add .",
     "preinstall": "npx rimraf .husky",
     "prepare": "husky install",
     "postprepare": "npx husky add .husky/pre-commit \"npm run hook:precommit\"",
+    "start": "npx rimraf build/ && webpack serve --config ./webpack.config.js --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@babel/cli": "^7.12.16",
     "@babel/core": "^7.12.16",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.13.8",
+    "@babel/plugin-proposal-optional-chaining": "^7.13.12",
     "@babel/plugin-transform-arrow-functions": "^7.13.0",
     "@babel/plugin-transform-block-scoping": "^7.12.13",
     "@babel/plugin-transform-modules-commonjs": "^7.13.8",
@@ -55,6 +57,7 @@
     "path-browserify": "^1.0.1",
     "postcss": "^6.0.23",
     "prettier": "^2.2.1",
+    "react-auto-textarea": "file:../../../../react-auto-textarea",
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",

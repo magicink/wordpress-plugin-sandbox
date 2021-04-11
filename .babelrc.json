@@ -5,7 +5,9 @@
     "@babel/plugin-transform-template-literals",
     "@babel/plugin-transform-modules-commonjs",
     "@babel/plugin-transform-runtime",
-    "@babel/plugin-transform-regenerator"
+    "@babel/plugin-transform-regenerator",
+    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-proposal-nullish-coalescing-operator"
   ],
   "presets": [
     [

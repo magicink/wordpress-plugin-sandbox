@@ -1,3 +1,68 @@
-.comic-panel-content {
-  background-color: green;
+.comic-panel {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0 !important;
+  width: 100%;
+
+  div,
+  input {
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    padding: 12px;
+
+    &:focus {
+      background-color: white;
+    }
+  }
+
+  .title {
+    background-color: rgb(230,230,230);
+    font-size: x-large;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+}
+
+.comic-dialogue {
+  align-items: flex-start;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+
+  div,
+  input,
+  textarea {
+    align-items: flex-start;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    padding: 12px;
+
+    &:focus {
+      background-color: white;
+    }
+  }
+
+  .speaker {
+    padding-right: 2em;
+    text-align: right;
+    text-transform: uppercase;
+    width: 25%;
+
+    &:after {
+      content: ':';
+    }
+  }
+
+  div.dialogue {
+    width: 75%;
+
+    pre {
+      word-break: break-all;
+    }
+  }
 }
