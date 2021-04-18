@@ -1,5 +1,5 @@
 import './styles.scss'
-import { AutoTextArea } from 'react-auto-textarea'
+import { AutoTextArea } from '../../../../react-auto-textarea'
 
 wp.blocks.registerBlockType('plugin-sandbox/comic-panel-block', {
   apiVersion: 2,

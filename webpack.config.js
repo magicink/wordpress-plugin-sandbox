@@ -15,7 +15,7 @@ module.exports = () => {
         'core-js/stable',
         'regenerator-runtime/runtime',
         'webpack-dev-server/client?http://localhost:3893',
-        `${path.resolve(__dirname)}/src/js/blocks/index.js`
+        `${path.resolve(__dirname)}/src/js/blocks/ComicPanel/index.js`
       ],
       main: [`${path.resolve(__dirname)}/src/js/index.js`]
     },
