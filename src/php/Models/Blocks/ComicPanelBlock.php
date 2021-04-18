@@ -13,19 +13,14 @@ if (!class_exists(ComicPanelBlock::class)) {
 
     public function register()
     {
+      $plugin_url = plugins_url('plugin-lab/build/', 'plugin-lab');
       wp_register_script(
         'comic-panel-block-editor',
-        'http://localhost:3893/build/js/blocks.js',
+        "{$plugin_url}/blocks.js",
         ['wp-blocks', 'wp-block-editor']
       );
-      wp_register_style(
-        'comic-panel-block-editor',
-        'http://localhost:3893/build/js/blocks.css'
-      );
-      wp_register_style(
-        'comic-panel-block-editor',
-        'http://localhost:3893/build/js/blocks.css'
-      );
+      wp_register_style('comic-panel-block-editor', "{$plugin_url}/blocks.css");
+      wp_register_style('comic-panel-block-editor', "{$plugin_url}/blocks.css");
       register_block_type('plugin-sandbox/comic-panel-block-editor', [
         'apiVersion' => 2,
         'editor_script' => 'comic-panel-block-editor',
@@ -33,7 +28,7 @@ if (!class_exists(ComicPanelBlock::class)) {
         'style' => 'comic-panel-block-editor',
       ]);
     }
-    public function register_category($categories)
+    public function register_category($categories): array
     {
       return array_merge($categories, [
         [

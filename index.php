@@ -8,7 +8,6 @@ require_once 'src/php/Models/Blocks/ComicPanelBlock.php';
 if (!class_exists(PluginSandbox::class)) {
   class PluginSandbox
   {
-    /** @noinspection PhpExpressionResultUnusedInspection */
     public function __construct()
     {
       new Modules\PostTypes\SitePostType();

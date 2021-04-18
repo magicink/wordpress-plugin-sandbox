@@ -53,7 +53,7 @@ module.exports = () => {
     },
     output: {
       filename: '[name].js',
-      path: `${path.resolve(__dirname)}/build/js`,
+      path: `${path.resolve(__dirname)}/build`,
       publicPath: '/'
     },
     plugins: [new WebpackManifestPlugin(), new MiniCssExtractPlugin()],
