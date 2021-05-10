@@ -10,6 +10,7 @@ if (!class_exists(PluginSandbox::class)) {
   {
     public function __construct()
     {
+      remove_filter('the_content', 'wpautop');
       new Modules\PostTypes\SitePostType();
       new Modules\Blocks\ComicPanelBlock();
     }

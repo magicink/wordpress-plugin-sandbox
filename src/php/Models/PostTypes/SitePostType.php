@@ -27,6 +27,9 @@ if (!class_exists(SitePostType::class)) {
         'capability_type' => 'page',
         'show_in_rest' => true,
         'rest_base' => 'lab/sites',
+        'show_in_graphql' => true,
+        'graphql_single_name' => 'site',
+        'graphql_plural_name' => 'sites',
       ];
       register_post_type('site', $args);
     }
