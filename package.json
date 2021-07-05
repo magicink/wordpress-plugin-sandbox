@@ -10,11 +10,7 @@
   },
   "main": "index.php",
   "scripts": {
-    "format": "prettier --write \"./**/*.{js,json,md,php}\"",
-    "hook:precommit": "npm run format && git add .",
-    "preinstall": "npx rimraf .husky",
-    "prepare": "husky install",
-    "postprepare": "npx husky add .husky/pre-commit \"npm run hook:precommit\"",
+    "format": "npx sort-package-json && prettier --write \"./**/*.{js,json,md,php}\"",
     "start": "npx rimraf build/ && webpack serve --config ./webpack.config.js --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -51,7 +47,6 @@
     "@testing-library/react-hooks": "^5.0.3",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.1",
-    "husky": "^6.0.0",
     "jest": "^26.6.3",
     "mini-css-extract-plugin": "^1.4.1",
     "path-browserify": "^1.0.1",

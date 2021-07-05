@@ -1,5 +1,4 @@
 import './styles.scss'
-import { AutoTextArea } from '../../../../react-auto-textarea'
 
 wp.blocks.registerBlockType('plugin-sandbox/comic-panel-block', {
   apiVersion: 2,
@@ -17,7 +16,7 @@ wp.blocks.registerBlockType('plugin-sandbox/comic-panel-block', {
     const { description, title } = attributes
 
     const handleChange = attribute => e => {
-      props.setAttributes({
+      setAttributes({
         [attribute]: e.target.value
       })
     }
@@ -69,11 +68,6 @@ wp.blocks.registerBlockType('plugin-sandbox/comic-dialog-block', {
     return (
       <div className={'comic-dialogue'}>
         <input onChange={handleChange('speaker')} value={speaker} />
-        <AutoTextArea
-          onChange={handleChange('dialogue')}
-          value={dialogue}
-          maxHeight={250}
-        />
       </div>
     )
   },
