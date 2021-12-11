@@ -2,8 +2,6 @@
 /**
  * Plugin Name: WordPress Plugin Sandbox
  */
-require_once 'src/php/Models/PostTypes/SitePostType.php';
-require_once 'src/php/Models/Blocks/ComicPanelBlock.php';
 
 if (!class_exists(PluginSandbox::class)) {
   class PluginSandbox
@@ -11,8 +9,17 @@ if (!class_exists(PluginSandbox::class)) {
     public function __construct()
     {
       remove_filter('the_content', 'wpautop');
-      new Modules\PostTypes\SitePostType();
-      new Modules\Blocks\ComicPanelBlock();
+      add_filter( 'pods_register_post_type_mycpt', 'add_pods_graphql_support' );
+      add_filter( 'pods_register_taxonomy_mytax', 'add_pods_graphql_support' );
+
+      function add_pods_graphql_support( $options ) {
+
+        $options['show_in_graphql'] = true;
+        $options['graphql_single_name'] = $options['labels']['name'];
+        $options['graphql_plural_name'] = $options['labels']['singular_name'];
+
+        return $options;
+      }
     }
   }
 
