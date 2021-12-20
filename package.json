@@ -10,12 +10,10 @@
   },
   "main": "index.php",
   "scripts": {
-    "format": "npx sort-package-json && prettier --write \"**/*.{js,jsx,json,md,html,scss,css}\""
+    "format": "npx sort-package-json && prettier --write \"**/*.{js,jsx,json,md,html,scss,css,php}\""
   },
   "prettier": "@brandontom/prettier",
-  "dependencies": {},
-  "devDependencies": {},
-  "optionalDependencies": {
-    "@brandontom/prettier": "1.0.1"
+  "devDependencies": {
+    "@brandontom/prettier": "^1.0.16"
   }
 }
